@@ -8,5 +8,5 @@ export default function HomePage() {
     breadcrumbStore.trail = [{ label: "Home", path: "/" }];
   }, []);
 
-  return <div>Welcome to the Home Page!!</div>;
+  return <div>Welcome to the Home Page!</div>;
 }
