@@ -5,6 +5,9 @@ import { defineConfig } from "vite";
 export default defineConfig({
   base: "/anna-portfolio/",
   plugins: [react()],
+  build: {
+    outDir: "docs",
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
