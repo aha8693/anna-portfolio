@@ -2,7 +2,7 @@ import { Route, Routes, Navigate } from "react-router-dom";
 import { Introduction } from "./pages/Introduction";
 import { MainLayout } from "./pages/MainLayout";
 import Film from "./pages/Film";
-import HomePage from "./pages/Homepage";
+import HomePage from "./pages/HomePage";
 
 export function App() {
   return (
