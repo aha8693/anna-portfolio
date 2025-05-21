@@ -1,5 +1,5 @@
 {
-  "homepage": ".",
+  "homepage": "https://aha8693.github.io/anna-portfolio",
   "name": "anna-portfolio",
   "version": "1.0.0",
   "private": true,
@@ -28,6 +28,7 @@
     "@types/react-dom": "^19.1.5",
     "@vitejs/plugin-react": "^4.1.0",
     "autoprefixer": "^10.4.21",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.5.3",
     "prettier": "^3.5.3",
     "tailwindcss": "^4.1.7",
@@ -36,8 +37,9 @@
     "vite": "^5.0.10"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "build": "vite build"
   }
 }
