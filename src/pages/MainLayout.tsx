@@ -10,15 +10,23 @@ export const MainLayout = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <BreadcrumbProvider data={breadcrumbStore}>
-      <SidebarProvider defaultOpen={false}>
-        <AppSidebar />
-        <main className="flex-1 p-6">
-          <div className="flex items-center gap-4 mb-4">
-            <SidebarTrigger />
-            <AppBreadcrumb />
-          </div>
-          {children}
-        </main>
+      <SidebarProvider defaultOpen={true}>
+        {/* Layout wrapper */}
+        <div className="flex h-screen w-screen overflow-hidden">
+          {/* Sidebar */}
+          <AppSidebar />
+
+          {/* Main content: fills the rest of the screen */}
+          <main className="flex-1 relative overflow-hidden">
+            <div className="absolute inset-0 overflow-auto p-6">
+              <div className="relative z-10 flex items-center gap-4 mb-4 ">
+                <SidebarTrigger />
+                <AppBreadcrumb />
+              </div>
+              {children}
+            </div>
+          </main>
+        </div>
       </SidebarProvider>
     </BreadcrumbProvider>
   );
