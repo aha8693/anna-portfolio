@@ -17,14 +17,14 @@ export const HomePage = observer(() => {
     <div className="h-full w-full">
       {/* Background Image */}
       <div
-        className="absolute inset-0 bg-cover bg-center z-0"
+        className="intro-bg"
         style={{ backgroundImage: `url('src/assets/homepageBackground.jpg')` }}
       />
       {/* Optional Dark Overlay */}
-      <div className="absolute inset-0 bg-black/50 z-0" />
+      <div className="intro-bg bg-black/50" />
 
       {/* Content */}
-      <div className="relative z-10 h-full flex flex-col items-center justify-center text-white text-center px-4 font-serif">
+      <div className="intro-container">
         <motion.div
           className="text-lg drop-shadow-lg mb-1"
           initial={{ opacity: 0, y: -20 }}
@@ -48,7 +48,7 @@ export const HomePage = observer(() => {
         >
           <Button
             variant="default"
-            className="glass-button text-lg px-6 py-3 font-semibold hover:scale-105 transition"
+            className="glass-button intro-button glass-button:hove"
             onClick={() => navigate("/introduction")}
           >
             Get Started

@@ -22,6 +22,14 @@ class IntroStore {
       clearInterval(this.interval);
     }
   }
+
+  next() {
+  this.currentIndex = (this.currentIndex + 1) % 4;
+}
+
+prev() {
+  this.currentIndex = (this.currentIndex - 1 + 4) % 4;
+}
 }
 
 export const introStore = new IntroStore();

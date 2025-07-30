@@ -24,8 +24,8 @@ export const MainLayout = ({ children }: { children: React.ReactNode }) => {
 
           {/* Main content: fills the rest of the screen */}
           <main className="flex-1 relative overflow-hidden">
-            <div className="absolute inset-0 overflow-auto p-6">
-              <div className="relative z-10 flex items-center gap-4 mb-4 ">
+            <div className="absolute inset-0 p-6">
+              <div className="relative z-10 flex items-center gap-4">
                 <SidebarTrigger className={textColorClass} />
                 <AppBreadcrumb color={textColorClass} />
               </div>
