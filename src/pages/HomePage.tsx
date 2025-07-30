@@ -24,7 +24,7 @@ export const HomePage = observer(() => {
       <div className="intro-bg bg-black/50" />
 
       {/* Content */}
-      <div className="intro-container">
+      <div className="container-full intro-container-font">
         <motion.div
           className="text-lg drop-shadow-lg mb-1"
           initial={{ opacity: 0, y: -20 }}
