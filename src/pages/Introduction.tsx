@@ -1,6 +1,7 @@
 import { observer } from "mobx-react-lite";
 import { introStore } from "../stores/IntroStore";
 import { useSetBreadcrumb } from "@/hooks/useSetBreadcrumb";
+import { ROUTES } from "@/types/routes";
 
 const content = [
   `printf("Hello, World!");\nMy name is Anna An.\nI am a highly skilled and motivated Software Engineer with expertise in biology, computer science, and design.`,
@@ -11,8 +12,8 @@ const content = [
 
 export const Introduction = observer(() => {
   useSetBreadcrumb([
-    { label: "Home", path: "/" },
-    { label: "Introduction", path: "intro" },
+    { label: "Home", path: ROUTES.HOME },
+    { label: "Introduction", path: ROUTES.INTRODUCTION },
   ]);
   return (
     <div className="flex items-center justify-center h-screen p-6 bg-white text-black">

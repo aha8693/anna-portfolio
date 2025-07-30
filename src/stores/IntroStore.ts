@@ -1,4 +1,4 @@
-import { makeAutoObservable } from "mobx";
+import { makeAutoObservable, runInAction } from "mobx";
 
 class IntroStore {
   currentIndex = 0;
@@ -11,7 +11,9 @@ class IntroStore {
 
   startRotation() {
     this.interval = window.setInterval(() => {
-      this.currentIndex = (this.currentIndex + 1) % 4;
+      runInAction(() => {
+        this.currentIndex = (this.currentIndex + 1) % 4;
+      });
     }, 6000);
   }
 

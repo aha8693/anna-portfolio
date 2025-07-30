@@ -18,7 +18,6 @@ export const MainLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <BreadcrumbProvider data={breadcrumbStore}>
       <SidebarProvider defaultOpen={true}>
-        {/* Layout wrapper */}
         <div className="flex h-screen w-screen overflow-hidden">
           {/* Sidebar */}
           <AppSidebar />
