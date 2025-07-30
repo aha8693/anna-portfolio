@@ -4,8 +4,15 @@ import { AppSidebar } from "@/components/app-sidebar";
 import { AppBreadcrumb } from "@/components/app-breadcrumb";
 import { BreadcrumbProvider } from "@/hooks/useBreadcrumbContext";
 import { BreadcrumbStore } from "@/stores/breadcrumbStore";
+import { useLocation } from "react-router-dom";
 
 export const MainLayout = ({ children }: { children: React.ReactNode }) => {
+  const whiteTextRoutes = new Set(["/"]);
+
+  const location = useLocation();
+  const useWhiteText = whiteTextRoutes.has(location.pathname);
+  const textColorClass = useWhiteText ? "text-white" : "text-black";
+
   const breadcrumbStore = useMemo(() => new BreadcrumbStore([]), []);
 
   return (
@@ -20,8 +27,8 @@ export const MainLayout = ({ children }: { children: React.ReactNode }) => {
           <main className="flex-1 relative overflow-hidden">
             <div className="absolute inset-0 overflow-auto p-6">
               <div className="relative z-10 flex items-center gap-4 mb-4 ">
-                <SidebarTrigger />
-                <AppBreadcrumb />
+                <SidebarTrigger className={textColorClass} />
+                <AppBreadcrumb color={textColorClass} />
               </div>
               {children}
             </div>

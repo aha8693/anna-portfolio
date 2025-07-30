@@ -1,7 +1,6 @@
 import { observer } from "mobx-react-lite";
 import { introStore } from "../stores/IntroStore";
-import { useBreadcrumbContext } from "@/hooks/useBreadcrumbContext";
-import { useEffect } from "react";
+import { useSetBreadcrumb } from "@/hooks/useSetBreadcrumb";
 
 const content = [
   `printf("Hello, World!");\nMy name is Anna An.\nI am a highly skilled and motivated Software Engineer with expertise in biology, computer science, and design.`,
@@ -11,14 +10,10 @@ const content = [
 ];
 
 export const Introduction = observer(() => {
-  const breadcrumbStore = useBreadcrumbContext();
-
-  useEffect(() => {
-    breadcrumbStore.trail = [
-      { label: "Home", path: "/" },
-      { label: "Introduction" },
-    ];
-  }, []);
+  useSetBreadcrumb([
+    { label: "Home", path: "/" },
+    { label: "Introduction", path: "intro" },
+  ]);
   return (
     <div className="flex items-center justify-center h-screen p-6 bg-white text-black">
       <div className="text-lg whitespace-pre-wrap max-w-xl border-2 border-black p-6 rounded-xl shadow-md transition-all duration-500">

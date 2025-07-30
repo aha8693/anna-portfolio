@@ -1,25 +1,25 @@
-import { makeAutoObservable } from 'mobx'
+import { makeAutoObservable } from "mobx";
 
 class IntroStore {
-  currentIndex = 0
-  interval: number | null = null
+  currentIndex = 0;
+  interval: number | null = null;
 
   constructor() {
-    makeAutoObservable(this)
-    this.startRotation()
+    makeAutoObservable(this);
+    this.startRotation();
   }
 
   startRotation() {
     this.interval = window.setInterval(() => {
-      this.currentIndex = (this.currentIndex + 1) % 4
-    }, 3000)
+      this.currentIndex = (this.currentIndex + 1) % 4;
+    }, 6000);
   }
 
   stopRotation() {
     if (this.interval) {
-      clearInterval(this.interval)
+      clearInterval(this.interval);
     }
   }
 }
 
-export const introStore = new IntroStore()
+export const introStore = new IntroStore();

@@ -9,13 +9,13 @@ import {
 import { useBreadcrumbContext } from "@/hooks/useBreadcrumbContext";
 import { observer } from "mobx-react-lite";
 
-export const AppBreadcrumb = observer(() => {
+export const AppBreadcrumb = observer(({ color }: { color: string }) => {
   const breadcrumbStore = useBreadcrumbContext();
   return (
     <Breadcrumb>
       <BreadcrumbList>
         {breadcrumbStore.trail.map((item, index) => (
-          <div key={index} className="flex items-center">
+          <div key={index} className={`flex items-center ${color}`}>
             <BreadcrumbItem>
               {item.path ? (
                 <BreadcrumbLink href={item.path}>{item.label}</BreadcrumbLink>
@@ -31,4 +31,4 @@ export const AppBreadcrumb = observer(() => {
       </BreadcrumbList>
     </Breadcrumb>
   );
-})
+});
