@@ -8,7 +8,7 @@ export interface SlideData {
   imageSrc: string;
   imageAlt?: string;
 }
-
+const deploy = ""
 const footerHeder = "Anna (Hyean) An ";
 
 const footerBody =
