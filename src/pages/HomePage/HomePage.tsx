@@ -1,12 +1,10 @@
 import { Button } from "@/components/ui/button";
-import { useBreadcrumbContext } from "@/hooks/useBreadcrumbContext";
 import { useSetBreadcrumb } from "@/hooks/useSetBreadcrumb";
 import { ROUTES } from "@/types/routes";
 import { motion } from "framer-motion";
-import { runInAction } from "mobx";
 import { observer } from "mobx-react-lite";
-import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import "./HomePage.css";
 
 export const HomePage = observer(() => {
   const navigate = useNavigate();

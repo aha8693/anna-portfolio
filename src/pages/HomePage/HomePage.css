@@ -1,0 +1,39 @@
+.intro-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover; /* bg-cover */
+  background-position: center; /* bg-center */
+  z-index: 0;
+}
+
+.intro-container-font {
+  color: white;
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+.glass-button {
+  background-color: rgba(255, 255, 255, 0.25); /* 30% opacity */
+  backdrop-filter: blur(8px);
+  border: 1px solid rgb(var(--primary) / 0.4);
+  border-radius: var(--radius);
+  color: var(--primary-foreground);
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.glass-button:hover {
+  transform: scale(1.05);
+  background-color: rgb(var(--primary) / 0.5);
+}
+.intro-button {
+  font-size: 1.125rem; /* text-lg = 18px */
+  padding-left: 1.5rem; /* px-6 = 24px */
+  padding-right: 1.5rem;
+  padding-top: 0.75rem; /* py-3 = 12px */
+  padding-bottom: 0.75rem;
+  font-weight: 600; /* font-semibold */
+  transition: transform 0.2s ease-in-out;
+}
