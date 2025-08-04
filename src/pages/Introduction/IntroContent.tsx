@@ -8,7 +8,6 @@ export interface SlideData {
   imageSrc: string;
   imageAlt?: string;
 }
-const deploy = ""
 const footerHeder = "Anna (Hyean) An ";
 
 const footerBody =
@@ -24,7 +23,7 @@ export const introSlidesData: SlideData[] = [
       "with expertise in biology, computer science, and design.",
     footerHeader: footerHeder,
     footerBody: footerBody,
-    imageSrc: "src/assets/hello.jpeg",
+    imageSrc: "/anna-portfolio/images/hello.jpeg",
     imageAlt: "Hello",
   },
   {
@@ -36,7 +35,7 @@ export const introSlidesData: SlideData[] = [
       "Python, C/C#, and HTML/CSS. You can check it out under the 'Codes' tab.",
     footerHeader: footerHeder,
     footerBody: footerBody,
-    imageSrc: "/images/developer.png",
+    imageSrc: "/anna-portfolio/images/developer.jpeg",
     imageAlt: "Developer",
   },
   // Add more slides as needed
