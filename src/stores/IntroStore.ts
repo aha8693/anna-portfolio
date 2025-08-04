@@ -14,7 +14,7 @@ class IntroStore {
       runInAction(() => {
         this.currentIndex = (this.currentIndex + 1) % 4;
       });
-    }, 6000);
+    }, 15000);
   }
 
   stopRotation() {
@@ -24,12 +24,12 @@ class IntroStore {
   }
 
   next() {
-  this.currentIndex = (this.currentIndex + 1) % 4;
-}
+    this.currentIndex = (this.currentIndex + 1) % 4;
+  }
 
-prev() {
-  this.currentIndex = (this.currentIndex - 1 + 4) % 4;
-}
+  prev() {
+    this.currentIndex = (this.currentIndex - 1 + 4) % 4;
+  }
 }
 
 export const introStore = new IntroStore();
