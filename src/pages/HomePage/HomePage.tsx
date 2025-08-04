@@ -17,7 +17,7 @@ export const HomePage = observer(() => {
       <div
         className="intro-bg"
         style={{
-          backgroundImage: `url(/anna-portfolio/images/homepageBackground.jpeg)`,
+          backgroundImage: `url(/anna-portfolio/images/homepageBackground.jpg)`,
         }}
       />
       <div className="intro-bg bg-black/50" />
