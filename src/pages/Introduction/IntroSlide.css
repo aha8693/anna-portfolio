@@ -1,3 +1,5 @@
+@import "@/index.css";
+
 .slide-wrapper {
   position: relative;
   width: 100%;
@@ -12,9 +14,6 @@
   height: 100%;
   transition: transform 0.7s ease-in-out;
 }
-.slide-inner:hover {
-  transition: none !important;
-}
 
 .slide {
   position: relative;
@@ -27,7 +26,7 @@
 
 .slide-title {
   position: absolute;
-  bottom: 50%;
+  bottom: 58%;
   z-index: 1;
   font-size: 2.4rem;
 }
@@ -60,19 +59,39 @@
   justify-content: flex-end; /* Push content to the right */
 }
 
+.white-box:hover {
+  transition: none !important; /* stop slide transition */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* subtle shadow glow */
+}
+
 .slide-body {
-  padding: 2rem;
-  transform: translateY(5.5rem);
-  font-size: 16px;
+  display: flex;
+  flex-direction: column-reverse;
+  height: 230px;
+  padding: 1.5rem;
+  transform: translateY(5.1rem);
+  font-size: var(--font-size, 16px);
+  font-family: "Inter";
+  font-weight: 300;
+  white-space: pre-line;
 }
 
 .slide-image {
   max-width: 100%;
   max-height: 100%;
   object-fit: cover;
-  margin-right: 5rem; /* Push image to the left */
-  width: 20rem;
-  height: 20rem;
+  margin-right: 3rem; /* Push image to the right */
+  height: 330px;
+  width: 330px;
+}
+
+.slide-sidenote {
+  position: absolute;
+  bottom: 14%;
+  right: 7%;
+  font-family: "Inter";
+  font-size: 9px;
+  color: gray;
 }
 
 .buttons {
