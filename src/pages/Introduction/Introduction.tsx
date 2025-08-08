@@ -7,12 +7,19 @@ import { introSlidesData } from "./IntroContent";
 import "./IntroSlide.css";
 import { Button } from "@/components/ui/button";
 import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
+import { useEffect } from "react";
 
 export const Introduction = observer(() => {
   useSetBreadcrumb([
     { label: "Home", path: ROUTES.HOME },
     { label: "Introduction", path: ROUTES.INTRODUCTION },
   ]);
+  useEffect(() => {
+    introStore.currentIndex = 0;
+    introStore.startRotation();
+
+    return () => introStore.stopRotation(); // Cleanup when leaving page
+  }, []);
 
   return (
     <>

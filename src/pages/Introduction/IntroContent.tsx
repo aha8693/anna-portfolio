@@ -30,7 +30,7 @@ export const introSlidesData: SlideData[] = [
   },
   {
     key: "dev",
-    title: "Journey as a Developer",
+    title: "Journey as a Developer 💻",
     boldPart: "Developer",
     body: "I build full-stack systems across frontend, backend, and data layers using JavaScript, .NET, Python, and SQL.\n \n  My work focuses on delivering reliable, data-driven solutions and collaborating across teams in government and healthcare sectors.",
     fontsize: "15px",
@@ -41,7 +41,7 @@ export const introSlidesData: SlideData[] = [
   },
   {
     key: "research",
-    title: "Journey as a Researcher",
+    title: "Journey as a Researcher 🧠",
     boldPart: "Researcher",
     body:
       "With a B.S. in Neuroscience and Computer Science from Johns Hopkins, " +
@@ -50,11 +50,12 @@ export const introSlidesData: SlideData[] = [
     footerBody: footerBody,
     imageSrc: "/anna-portfolio/images/researcher.jpeg",
     imageAlt: "Researcher",
-    sidenote: "This was my first Cognition Box built as a research assistant :)"
+    sidenote:
+      "This was my first Cognition Box built as a research assistant :)",
   },
   {
     key: "design",
-    title: "Journey as a Visual Creator",
+    title: "Journey as a Visual Creator 🎨",
     boldPart: "Visual Creator",
     body:
       "I design creative and technical visuals, from scientific schematics to posters, " +

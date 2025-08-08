@@ -1,4 +1,12 @@
-import { Calendar, Home, Inbox, Search, Settings } from "lucide-react";
+import {
+  Home,
+  Sticker,
+  Brain,
+  Github,
+  Image,
+  Video,
+  CircleUser,
+} from "lucide-react";
 
 import {
   Sidebar,
@@ -9,7 +17,6 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-  SidebarProvider,
   useSidebar,
 } from "@/components/ui/sidebar";
 import { Link } from "react-router-dom";
@@ -18,10 +25,12 @@ import { ROUTES } from "@/types/routes";
 // Menu items.
 const items = [
   { title: "Home", url: ROUTES.HOME, icon: Home },
-  { title: "Introduction", url: ROUTES.INTRODUCTION, icon: Inbox },
-  { title: "Calendar", url: ROUTES.FILM, icon: Calendar },
-  { title: "Search", url: ROUTES.SEARCH, icon: Search },
-  { title: "Settings", url: ROUTES.SETTINGS, icon: Settings },
+  { title: "Introduction", url: ROUTES.INTRODUCTION, icon: Sticker },
+  { title: "Github", url: "http://github.com/aha8693/", icon: Github },
+  { title: "Research", url: ROUTES.FILM, icon: Brain },
+  { title: "Graphics", url: ROUTES.SEARCH, icon: Image },
+  { title: "Videos", url: ROUTES.FILM, icon: Video },
+  { title: "Contact", url: ROUTES.FILM, icon: CircleUser },
 ];
 
 export function AppSidebar() {
@@ -35,21 +44,35 @@ export function AppSidebar() {
           </SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu className="gap-4">
-              {items.map((item) => (
-                <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild>
-                    <Link
-                      to={item.url}
-                      onClick={() => {
-                        if (isMobile) setOpenMobile(false);
-                      }}
-                    >
-                      <item.icon />
-                      <span>{item.title}</span>
-                    </Link>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              ))}
+              {items.map((item) => {
+                const isExternal = item.url.startsWith("http");
+                return (
+                  <SidebarMenuItem key={item.title}>
+                    <SidebarMenuButton asChild>
+                      {isExternal ? (
+                        <a
+                          href={item.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <item.icon />
+                          <span>{item.title}</span>
+                        </a>
+                      ) : (
+                        <Link
+                          to={item.url}
+                          onClick={() => {
+                            if (isMobile) setOpenMobile(false);
+                          }}
+                        >
+                          <item.icon />
+                          <span>{item.title}</span>
+                        </Link>
+                      )}
+                    </SidebarMenuButton>
+                  </SidebarMenuItem>
+                );
+              })}
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>

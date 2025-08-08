@@ -6,10 +6,10 @@ class IntroStore {
 
   constructor() {
     makeAutoObservable(this);
-    this.startRotation();
   }
 
   startRotation() {
+    this.stopRotation(); // avoid multiple timers
     this.interval = window.setInterval(() => {
       runInAction(() => {
         this.currentIndex = (this.currentIndex + 1) % 4;
@@ -20,6 +20,7 @@ class IntroStore {
   stopRotation() {
     if (this.interval) {
       clearInterval(this.interval);
+      this.interval = null;
     }
   }
 
