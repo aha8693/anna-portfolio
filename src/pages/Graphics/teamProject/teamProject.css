@@ -1,4 +1,4 @@
-.header {
+.header-teampj {
   background-color: white;
   border-radius: 6px;
   background-color: rgba(255, 255, 255, 0.7); /* very transparent */
@@ -11,5 +11,5 @@
   text-align: center;
   letter-spacing: 0.5em;
 
-  margin-bottom: 1rem;
+  margin: 10rem 0 3rem;
 }

@@ -7,7 +7,7 @@ import { BreadcrumbStore } from "@/stores/breadcrumbStore";
 import { useLocation } from "react-router-dom";
 
 export const MainLayout = ({ children }: { children: React.ReactNode }) => {
-  const whiteTextRoutes = new Set(["/"]);
+  const whiteTextRoutes = new Set(["/", "/graphics"]);
 
   const location = useLocation();
   const useWhiteText = whiteTextRoutes.has(location.pathname);

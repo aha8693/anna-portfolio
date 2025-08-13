@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import "./Graphics.css";
 import { Illustration } from "./illustration/illustration";
-import { TeamProject } from "./teamProject";
+import { TeamProject } from "./teamProject/teamProject";
 import { observer } from "mobx-react-lite";
 import { useSetBreadcrumb } from "@/hooks/useSetBreadcrumb";
 import { ROUTES } from "@/types/routes";
@@ -20,7 +20,7 @@ export const Graphics = observer(() => {
   };
 
   return (
-    <div className="graphics-container">
+    <div className="absolute inset-0 graphics-container">
       <div className="graphics-title-container">
         <h1 className="graphics-header">Graphics</h1>
         <div className="graphics-subheader">

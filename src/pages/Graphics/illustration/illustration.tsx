@@ -1,6 +1,6 @@
 import { ZoomInModal } from "../Common/zoomInModal";
 import "../Graphics.css";
-import "./illustration.css"
+import "./illustration.css";
 
 interface GraphicItem {
   id: number;
@@ -73,7 +73,7 @@ export const Illustration = () => {
   return (
     <div className="graphic-section">
       <div className="header">ILLUSTRATION</div>
-      <ZoomInModal images={illustrationItems} />
+      <ZoomInModal images={illustrationItems} mode="illustration" />
     </div>
   );
 };

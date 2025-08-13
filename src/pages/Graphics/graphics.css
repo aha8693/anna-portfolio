@@ -1,18 +1,16 @@
 .graphics-container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 0;
+  width: 100%;
   font-family: Arial, sans-serif;
 }
 .graphics-title-container {
+  position: relative;
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url("/anna-portfolio/images/graphicsBackground.jpg");
   background-size: cover; /* cover entire header */
   background-position: center; /* center the image */
 
-  padding-top: 2rem;
+  padding: 6rem 0rem .5rem 0rem;
 }
 
 .graphics-header {
@@ -58,8 +56,8 @@
 }
 
 .graphic-section {
+  margin: 0rem 5rem;
   scroll-margin-top: 80px;
-  border-top: #333;
 }
 
 .graphic-section h2 {
@@ -69,8 +67,9 @@
 }
 
 .divider {
+  width: 90%;
   border: none;
   border-top: 2px solid #333;
-  margin: 4rem 0 3rem 0;
+  margin: 4rem auto 3rem auto;
   opacity: 0.1;
 }
