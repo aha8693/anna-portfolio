@@ -1,51 +1,55 @@
-/* Graphics.css */
-
-/* Container for the whole graphics page */
 .graphics-container {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem 0;
   font-family: Arial, sans-serif;
+}
+.graphics-title-container {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("/anna-portfolio/images/graphicsBackground.jpg");
+  background-size: cover; /* cover entire header */
+  background-position: center; /* center the image */
 
-  /* Allow manual scrolling */
-  overflow-y: auto;
-  scroll-behavior: smooth; /* smooth scroll for manual scroll as well */
-  -webkit-overflow-scrolling: touch; /* smoother scrolling on mobile */
+  padding-top: 2rem;
 }
 
-/* Main header */
 .graphics-header {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 1.5rem;
+  color: white;
 }
 
-/* Subheader with buttons */
 .graphics-subheader {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin-bottom: 2rem;
-  position: sticky; /* keep buttons visible while scrolling */
   top: 0;
-  background-color: #fff;
   z-index: 10;
-  padding: 1rem 0;
-  border-bottom: 1px solid #ddd;
+  padding: 1rem;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
 }
 
 .graphics-subheader button {
   padding: 0.5rem 1rem;
-  font-size: 1rem;
+  font-size: 0.8rem;
+  font-family: "Arial";
+  font-weight: 600;
+  color: white;
   cursor: pointer;
-  border: 2px solid #333;
   border-radius: 6px;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.1); /* very transparent */
+  backdrop-filter: blur(8px); /* blur background behind */
+  -webkit-backdrop-filter: blur(8px); /* for Safari */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* subtle border for glass outline */
+
   transition:
     background-color 0.3s,
-    color 0.3s;
+    color 0.3s,
+    transform 0.2s;
 }
 
 .graphics-subheader button:hover {
@@ -53,10 +57,9 @@
   color: #fff;
 }
 
-/* Each section (Illustration / Team Project) */
 .graphic-section {
-  margin-bottom: 3rem;
-  scroll-margin-top: 80px; /* offset for sticky header when scrolling via button */
+  scroll-margin-top: 80px;
+  border-top: #333;
 }
 
 .graphic-section h2 {
@@ -65,39 +68,9 @@
   text-align: center;
 }
 
-/* Grid of graphic items */
-.graphic-items {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1.5rem;
-  justify-items: center;
-}
-
-/* Individual graphic item */
-.graphic-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.graphic-item img {
-  width: 100%;
-  height: auto;
-  max-width: 250px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin-bottom: 0.5rem;
-}
-
-.graphic-item p {
-  font-size: 1rem;
-  font-weight: 500;
-  color: #333;
-}
-
-/* Optional: Highlight button for current section (JS needed) */
-.graphics-subheader button.active {
-  background-color: #333;
-  color: #fff;
+.divider {
+  border: none;
+  border-top: 2px solid #333;
+  margin: 4rem 0 3rem 0;
+  opacity: 0.1;
 }

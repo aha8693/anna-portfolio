@@ -1,0 +1,87 @@
+.zoom-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.zoom-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  text-align: center;
+}
+
+.zoom-item img {
+  width: 100%;
+  max-width: 250px;
+  max-height: 250px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.zoom-item img:hover {
+  transform: scale(1.05);
+}
+
+.zoom-item p {
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+/* Modal overlay */
+.zoom-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow: auto;
+  padding: 1rem;
+}
+
+/* Modal content container */
+.zoom-content {
+  position: relative;
+  max-width: 90vw; 
+  max-height: 90vw; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.zoom-image {
+  display: block;
+  background: white;
+  width: auto;          
+  height: auto;         
+  max-width: 90vw;     
+  max-height: 90vh;     
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Close button */
+.zoom-close {
+  position: absolute;
+  top: 0px;
+  right: -100px;
+  font-size: 2rem;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  line-height: 36px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
