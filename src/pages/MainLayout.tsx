@@ -15,15 +15,19 @@ export const MainLayout = ({ children }: { children: React.ReactNode }) => {
 
   const breadcrumbStore = useMemo(() => new BreadcrumbStore([]), []);
 
+  const isGraphicsPage = location.pathname === "/graphics";
+
   return (
     <BreadcrumbProvider data={breadcrumbStore}>
       <SidebarProvider defaultOpen={true}>
-        <div className="flex h-screen w-screen overflow-hidden">
-          {/* Sidebar */}
+        <div
+          className={`flex h-screen w-screen ${isGraphicsPage ? "overflow-auto" : "overflow-hidden"}`}
+        >
           <AppSidebar />
 
-          {/* Main content: fills the rest of the screen */}
-          <main className="flex-1 relative overflow-hidden">
+          <main
+            className={`flex-1 relative ${isGraphicsPage ? "overflow-visible" : "overflow-hidden"}`}
+          >
             <div className="absolute inset-0 p-6">
               <div className="relative z-10 flex items-center gap-4">
                 <SidebarTrigger className={textColorClass} />

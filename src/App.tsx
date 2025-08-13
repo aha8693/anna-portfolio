@@ -3,6 +3,7 @@ import { Introduction } from "./pages/Introduction/Introduction";
 import { MainLayout } from "./pages/MainLayout";
 import Film from "./pages/Film";
 import { HomePage } from "./pages/HomePage/HomePage";
+import { Graphics } from "./pages/Graphics/graphics";
 
 export function App() {
   return (
@@ -10,6 +11,7 @@ export function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/introduction" element={<Introduction />} />
+         <Route path="/graphics" element={<Graphics />} />
         <Route path="/film" element={<Film />} />
       </Routes>
     </MainLayout>
