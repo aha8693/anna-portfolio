@@ -1,0 +1,57 @@
+.research-page {
+  font-family: Arial, sans-serif;
+}
+
+.research-header {
+  background-image: url("/anna-portfolio/images/researchHeader.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.research-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+
+.research-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.research-card {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.research-image {
+  width: 200px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.research-info {
+  flex: 1;
+}
+
+.research-paper-title {
+  font-size: 1.25rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.research-description {
+  color: #555;
+  line-height: 1.4;
+}

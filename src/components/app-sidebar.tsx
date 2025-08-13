@@ -27,7 +27,7 @@ const items = [
   { title: "Home", url: ROUTES.HOME, icon: Home },
   { title: "Introduction", url: ROUTES.INTRODUCTION, icon: Sticker },
   { title: "Github", url: "http://github.com/aha8693/", icon: Github },
-  { title: "Research", url: ROUTES.FILM, icon: Brain },
+  { title: "Research", url: ROUTES.RESEARCH, icon: Brain },
   { title: "Graphics", url: ROUTES.GRAPHICS, icon: Image },
   { title: "Videos", url: ROUTES.FILM, icon: Video },
   { title: "Contact", url: ROUTES.FILM, icon: CircleUser },

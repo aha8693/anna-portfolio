@@ -7,26 +7,27 @@ import { BreadcrumbStore } from "@/stores/breadcrumbStore";
 import { useLocation } from "react-router-dom";
 
 export const MainLayout = ({ children }: { children: React.ReactNode }) => {
-  const whiteTextRoutes = new Set(["/", "/graphics"]);
-
   const location = useLocation();
+
+  const whiteTextRoutes = new Set(["/", "/graphics"]);
+  const scrollable = new Set(["/graphics", "/research"]);
+
   const useWhiteText = whiteTextRoutes.has(location.pathname);
   const textColorClass = useWhiteText ? "text-white" : "text-black";
+  const useScroll = scrollable.has(location.pathname);
 
   const breadcrumbStore = useMemo(() => new BreadcrumbStore([]), []);
-
-  const isGraphicsPage = location.pathname === "/graphics";
 
   return (
     <BreadcrumbProvider data={breadcrumbStore}>
       <SidebarProvider defaultOpen={true}>
         <div
-          className={`flex h-screen w-screen ${isGraphicsPage ? "overflow-auto" : "overflow-hidden"}`}
+          className={`flex h-screen w-screen ${useScroll ? "overflow-auto" : "overflow-hidden"}`}
         >
           <AppSidebar />
 
           <main
-            className={`flex-1 relative ${isGraphicsPage ? "overflow-visible" : "overflow-hidden"}`}
+            className={`flex-1 relative ${useScroll ? "overflow-visible" : "overflow-hidden"}`}
           >
             <div className="absolute inset-0 p-6">
               <div className="relative z-10 flex items-center gap-4">
