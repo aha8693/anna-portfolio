@@ -9,7 +9,7 @@ import { useLocation } from "react-router-dom";
 export const MainLayout = ({ children }: { children: React.ReactNode }) => {
   const location = useLocation();
 
-  const whiteTextRoutes = new Set(["/", "/graphics"]);
+  const whiteTextRoutes = new Set(["/", "/graphics", "/research"]);
   const scrollable = new Set(["/graphics", "/research"]);
 
   const useWhiteText = whiteTextRoutes.has(location.pathname);

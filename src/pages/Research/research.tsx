@@ -1,5 +1,3 @@
-// src/pages/research/research.tsx
-import React from "react";
 import "./research.css";
 import { ResearchContents } from "./researchContents";
 import { useSetBreadcrumb } from "@/hooks/useSetBreadcrumb";
@@ -12,11 +10,11 @@ export const Research = () => {
   ]);
   return (
     <div className="research-page">
-      <header className="research-header">
-        <h1 className="research-title">Research</h1>
-      </header>
+      <div className="research-title-container">
+        <h1 className="research-header">Research</h1>
+        <h2 className="research-subheader"> Technical research in data analysis, machine learning, and neuroscience, presenting detailed studies and experimental reports. </h2>
+      </div>
 
-      {/* Render research papers */}
       <ResearchContents />
     </div>
   );
