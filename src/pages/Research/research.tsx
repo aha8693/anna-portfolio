@@ -12,7 +12,7 @@ export const Research = () => {
     <div className="research-page">
       <div className="research-title-container">
         <h1 className="research-header">Research</h1>
-        <h2 className="research-subheader"> Technical research in data analysis, machine learning, and neuroscience, presenting detailed studies and experimental reports. </h2>
+        
       </div>
 
       <ResearchContents />

@@ -81,8 +81,8 @@
   max-height: 100%;
   object-fit: cover;
   margin-right: 3rem; /* Push image to the right */
-  height: 330px;
-  width: 330px;
+  height: 70%;
+  width: 50%;
 }
 
 .slide-sidenote {

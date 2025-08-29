@@ -22,6 +22,7 @@
 .zoom-description {
   white-space: pre-line;
   margin: 1rem;
+  text-align: left;
 }
 
 .zoom-item img {

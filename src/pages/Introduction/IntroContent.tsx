@@ -37,7 +37,7 @@ export const introSlidesData: SlideData[] = [
     key: "dev",
     title: "Journey as a Developer 💻",
     boldPart: "Developer",
-    body: "I build full-stack systems across frontend, backend, and data layers using JavaScript, .NET, Python, and SQL.\n \n  My work focuses on delivering reliable, data-driven solutions and collaborating across teams in government and healthcare sectors.",
+    body: "I build full-stack systems across frontend, backend, and data layers using Typescript, React, .NET, Python, and SQL.\n \n  My work focuses on delivering reliable, data-driven solutions and collaborating across teams in government and healthcare sectors.",
     fontsize: "15px",
     footerHeader: footerHeder,
     footerBody: footerBody,
