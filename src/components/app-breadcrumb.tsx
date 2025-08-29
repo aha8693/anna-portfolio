@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/breadcrumb";
 import { useBreadcrumbContext } from "@/hooks/useBreadcrumbContext";
 import { observer } from "mobx-react-lite";
+import { Link } from "react-router-dom";
 
 export const AppBreadcrumb = observer(({ color }: { color: string }) => {
   const breadcrumbStore = useBreadcrumbContext();
@@ -18,7 +19,9 @@ export const AppBreadcrumb = observer(({ color }: { color: string }) => {
           <div key={index} className={`flex items-center ${color}`}>
             <BreadcrumbItem>
               {item.path ? (
-                <BreadcrumbLink href={item.path}>{item.label}</BreadcrumbLink>
+                <BreadcrumbLink>
+                  <Link to={item.path}>{item.label}</Link>
+                </BreadcrumbLink>
               ) : (
                 <BreadcrumbPage>{item.label}</BreadcrumbPage>
               )}

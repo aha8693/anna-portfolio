@@ -62,9 +62,9 @@ export const videoList: VideoItem[] = [
     id: 7,
     title: "2016 Yearbook Promotion Video: Hashtag",
     description: "A promotional video for the 2016 yearbook themed around the concept of hashtag.",
-    url: "https://www.youtube.com/watch?v=e3ZhGEWdti4&ab_channel=%EC%95%A0%EB%82%98",
+    url: "https://www.youtube.com/watch?v=Z4aU21EdAzc&ab_channel=KISJYearbook",
     platform: "youtube",
-    videoId: "e3ZhGEWdti4",
+    videoId: "Z4aU21EdAzc",
   },
   {
     id: 8,

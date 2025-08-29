@@ -1,0 +1,78 @@
+.contact-page {
+  inset: 0;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),
+    url("/anna-portfolio/images/contactBackground.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 2rem;
+}
+
+.contact-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: white;
+  font-family: "DM Serif Text", serif;
+  letter-spacing: 2px; 
+  font-size: 50px;
+  text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Icon row */
+.contact-icons {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Icon cards */
+.contact-icon {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: rgb(241, 241, 241); /* neutral gray */
+  background-color: rgba(181, 180, 180, 0.4);
+  font-size: .9rem;
+  font-weight: 500;
+  padding: 1rem;
+  border-radius: 10rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* Hover with brand colors + glow */
+.contact-icon:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.contact-icon.email:hover {
+  color: #d44638; /* Gmail red */
+  box-shadow: 0 6px 20px rgba(212, 70, 56, 0.4);
+}
+
+.contact-icon.linkedin:hover {
+  color: #0077b5; /* LinkedIn blue */
+  box-shadow: 0 6px 20px rgba(0, 119, 181, 0.4);
+}
+
+.contact-icon.github:hover {
+  color: #333; /* GitHub black */
+  box-shadow: 0 6px 20px rgba(51, 51, 51, 0.4);
+}

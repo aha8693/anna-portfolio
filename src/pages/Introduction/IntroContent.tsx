@@ -1,3 +1,6 @@
+import { ROUTES } from "@/types/routes";
+
+export type RouteValue = (typeof ROUTES)[keyof typeof ROUTES];
 export interface SlideData {
   key: string;
   title: string;
@@ -10,6 +13,7 @@ export interface SlideData {
   sidenote?: string;
   imageSrc: string;
   imageAlt?: string;
+  url: RouteValue;
 }
 const footerHeder = "Anna (Hyean) An ";
 
@@ -27,6 +31,7 @@ export const introSlidesData: SlideData[] = [
     footerBody: footerBody,
     imageSrc: "/anna-portfolio/images/hello.jpeg",
     imageAlt: "Hello",
+    url: ROUTES.HOME,
   },
   {
     key: "dev",
@@ -38,6 +43,7 @@ export const introSlidesData: SlideData[] = [
     footerBody: footerBody,
     imageSrc: "/anna-portfolio/images/developer.jpeg",
     imageAlt: "Developer",
+    url: ROUTES.GITHUB,
   },
   {
     key: "research",
@@ -52,6 +58,7 @@ export const introSlidesData: SlideData[] = [
     imageAlt: "Researcher",
     sidenote:
       "This was my first Cognition Box built as a research assistant :)",
+    url: ROUTES.RESEARCH,
   },
   {
     key: "design",
@@ -64,6 +71,6 @@ export const introSlidesData: SlideData[] = [
     footerBody: footerBody,
     imageSrc: "/anna-portfolio/images/design.jpeg",
     imageAlt: "Visual Creator",
+    url: ROUTES.GRAPHICS,
   },
-  // Add more slides as needed
 ];
