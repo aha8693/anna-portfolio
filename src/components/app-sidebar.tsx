@@ -29,8 +29,8 @@ const items = [
   { title: "Github", url: "http://github.com/aha8693/", icon: Github },
   { title: "Research", url: ROUTES.RESEARCH, icon: Brain },
   { title: "Graphics", url: ROUTES.GRAPHICS, icon: Image },
-  { title: "Videos", url: ROUTES.FILM, icon: Video },
-  { title: "Contact", url: ROUTES.FILM, icon: CircleUser },
+  { title: "Videos", url: ROUTES.VIDEOS, icon: Video },
+  { title: "Contact", url: ROUTES.CONTACT, icon: CircleUser },
 ];
 
 export function AppSidebar() {

@@ -52,7 +52,7 @@ const teamProjectItems: GraphicItem[] = [
 export const TeamProject = () => {
   return (
     <div className="graphic-section">
-      <div className="header-teampj">TEAM PROJECTS</div>
+      <div className="header-teampj">TEAM PROJECT</div>
       <ZoomInModal images={teamProjectItems} mode="TeamProject" />
     </div>
   );

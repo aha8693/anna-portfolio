@@ -3,7 +3,7 @@ export const ROUTES = {
   INTRODUCTION: "/introduction",
   RESEARCH: "/research",
   GRAPHICS: "/graphics",
-  FILM: "/film",
+  VIDEOS: "/videos",
   SEARCH: "/search",
-  SETTINGS: "/settings",
+  CONTACT: "/contact",
 };

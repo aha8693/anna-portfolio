@@ -51,7 +51,7 @@ const researchPapers: ResearchPaper[] = [
       "Conducted pre- and post-pandemic comparisons and applied analytical algorithms to validate the reported decrease in PM2.5 concentrations during lockdowns. " +
       "Findings supported the original claim that air quality improved, while emphasizing the need for further studies to strengthen causal conclusions.",
     image: "/anna-portfolio/images/research/research4.jpg",
-    url: "https://drive.google.com/drive/u/0/folders/1fk1xhKHJ_JKqXi_Ms4HKTNT9LDIpehki",
+    url: "https://drive.google.com/file/d/1GYHat0QGnLotFcEZDLqaV6CTuXseWXIL/view?usp=sharing",
   },
   {
     id: 5,
@@ -64,7 +64,7 @@ const researchPapers: ResearchPaper[] = [
       "forming hypotheses about visual stimuli recognition and reflection-based cues. Planned future work to validate findings with computational " +
       "data analysis, contributing to the understanding of innate number-space cognition at the cellular and behavioral level.",
     image: "/anna-portfolio/images/research/research5.jpg",
-    url: "https://drive.google.com/drive/u/0/folders/1fk1xhKHJ_JKqXi_Ms4HKTNT9LDIpehki",
+    url: "https://drive.google.com/file/d/1_iS8sakGfdWWK-Y8B7A8CJgxPZJZVGx_/view?usp=sharing",
   },
 ];
 
